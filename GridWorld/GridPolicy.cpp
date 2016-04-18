@@ -46,8 +46,18 @@ void GridPolicy::Print() const
 
 	vector<vector<int>> polMatrix(grid.GetNumRow(), vector<int>(grid.GetNumCol(), 0));
 	for (auto cell : statePolicyMap)
-		if(cell.second.size() > 0)
-			polMatrix[cell.first.GetRowIndex()][cell.first.GetColIndex()] = cell.second.begin()->first.GetDirection();
+		if (cell.second.size() > 0)
+		{
+			float max = -1000;
+			int maxDirection = 0;
+			for (auto move : cell.second)			
+				if (move.second > max)
+				{
+					max = move.second;
+					maxDirection = move.first.GetDirection();
+				}			
+			polMatrix[cell.first.GetRowIndex()][cell.first.GetColIndex()] = maxDirection;
+		}
 
 	for (size_t i = 0; i < grid.GetNumRow(); i++)
 	{

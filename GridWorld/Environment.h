@@ -13,7 +13,7 @@ public:
 	virtual map<StateType, float> GetNextStateDistribution(const StateType& state, const ActionType& a) const = 0;
 	virtual vector<StateType> GetAllStates() const = 0;
 	virtual vector<ActionType>  GetPossibleActions(const StateType& state) const= 0;
-	
+	virtual bool IsStateFinal(const StateType& state) const = 0;	
 };
 
 

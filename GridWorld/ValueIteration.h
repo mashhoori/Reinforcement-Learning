@@ -12,14 +12,14 @@ public:
 		: delta{ delta }, discountFactor{ discountFactor }
 	{}
 
-	void ComputeValue(const Environment<StateType, ActionType>& env, ValueStructure<StateType>& valueStr);
-	void CreatePolicy(const Environment<StateType, ActionType>& env, Policy<StateType, ActionType>& policy, const ValueStructure<StateType>& valueStr);
+	void ComputeValue(const Environment<StateType, ActionType>& env, StateValueStructure<StateType>& valueStr);
+	void CreatePolicy(const Environment<StateType, ActionType>& env, Policy<StateType, ActionType>& policy, const StateValueStructure<StateType>& valueStr);
 
-	void Run(const Environment<StateType, ActionType>& env, Policy<StateType, ActionType>& policy, ValueStructure<StateType>& valueStr);
+	void Run(const Environment<StateType, ActionType>& env, Policy<StateType, ActionType>& policy, StateValueStructure<StateType>& valueStr);
 };
 
 template<class StateType, class ActionType>
-void ValueIteration<StateType, ActionType>::ComputeValue(const Environment<StateType, ActionType>& env, ValueStructure<StateType>& valueStr)
+void ValueIteration<StateType, ActionType>::ComputeValue(const Environment<StateType, ActionType>& env, StateValueStructure<StateType>& valueStr)
 {
 	vector<StateType> allStates = env.GetAllStates();
 
@@ -52,7 +52,7 @@ void ValueIteration<StateType, ActionType>::ComputeValue(const Environment<State
 }
 
 template<class StateType, class ActionType>
-void ValueIteration<StateType, ActionType>::CreatePolicy(const Environment<StateType, ActionType>& env, Policy<StateType, ActionType>& policy, const ValueStructure<StateType>& valueStr)
+void ValueIteration<StateType, ActionType>::CreatePolicy(const Environment<StateType, ActionType>& env, Policy<StateType, ActionType>& policy, const StateValueStructure<StateType>& valueStr)
 {
 	bool anyChange = false;
 
@@ -88,7 +88,7 @@ void ValueIteration<StateType, ActionType>::CreatePolicy(const Environment<State
 }
 
 template<class StateType, class ActionType>
-void ValueIteration<StateType, ActionType>::Run(const Environment<StateType, ActionType>& env, Policy<StateType, ActionType>& policy, ValueStructure<StateType>& valueStr)
+void ValueIteration<StateType, ActionType>::Run(const Environment<StateType, ActionType>& env, Policy<StateType, ActionType>& policy, StateValueStructure<StateType>& valueStr)
 {
 	ComputeValue(env, valueStr);
 	CreatePolicy(env, policy, valueStr);

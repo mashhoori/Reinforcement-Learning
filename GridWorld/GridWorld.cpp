@@ -1,18 +1,18 @@
-// GridWorld.cpp : Defines the entry point for the console application.
-//
+
 
 #include "stdafx.h"
 #include "Policy.h"
 #include "State.h"
 #include "Action.h"
 #include "Environment.h"
-#include "ValueStructure.h"
+#include "StateValueStructure.h"
 #include "Grid.h"
 #include "GridPolicy.h"
-#include "GridValueStructure.h"
+#include "GridStateValueStructure.h"
 #include "PolicyIteration.h"
 #include "ValueIteration.h"
-
+#include "GridActionValueStructure.h"
+#include "MonteCarlo_ES.h"
 
 
 int main()
@@ -38,21 +38,38 @@ int main()
 	GridPolicy gPolicy{g};
 	gPolicy.InitRandomPolicy();	
 
-	GridValueStructure gValStr{g};
+	GridStateValueStructure gValStr{g};
 	gValStr.InitValues();
 
 	
-	PolicyIteration<GridCell, Move> policyIteration{ 0.001f, 0.8f };
-	policyIteration.Run(g, gPolicy, gValStr);
+	//Uncomment this part for policy iteration
+	//===========================================
+	//PolicyIteration<GridCell, Move> policyIteration{ 0.001f, 0.8f };
+	//policyIteration.Run(g, gPolicy, gValStr);
+	//gValStr.Print();
+	//gPolicy.Print();
+	//===========================================
 
-	// Uncomment  for Value iteration
-	// ValueIteration<GridCell, Move> valueIteration{ 0.001f, 0.8f };
-	// valueIteration.Run(g, gPolicy, gValStr);
 
+	//Uncomment this part for value iteration
+	//===========================================	
+	//ValueIteration<GridCell, Move> valueIteration{ 0.001f, 0.8f };
+	//valueIteration.Run(g, gPolicy, gValStr);
+	//gValStr.Print();
+	//gPolicy.Print();
+	//===========================================
+	
 
-	gValStr.Print();
+	//Uncomment this part for Monte Carlo ES
+	//===========================================
+	GridActionValueStructure gActValStr{ g };
+	gActValStr.InitValues();
+	MonteCarlo_ES<GridCell, Move> dd{};
+	dd.Run(g, gPolicy, gActValStr);
+	gActValStr.Print();
 	gPolicy.Print();
-
+	//===========================================
+		
 
 	getchar();
     return 0;

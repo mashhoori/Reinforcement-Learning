@@ -13,10 +13,10 @@ public:
 		: delta{ delta }, discountFactor{ discountFactor }
 	{}
 	
-	void EvaluatePolicy(const Environment<StateType, ActionType>& env, const Policy<StateType, ActionType>& policy, ValueStructure<StateType>& valueStr);
-	bool ImporvePolicy(const Environment<StateType, ActionType>& env, Policy<StateType, ActionType>& policy, const ValueStructure<StateType>& valueStr);
+	void EvaluatePolicy(const Environment<StateType, ActionType>& env, const Policy<StateType, ActionType>& policy, StateValueStructure<StateType>& valueStr);
+	bool ImporvePolicy(const Environment<StateType, ActionType>& env, Policy<StateType, ActionType>& policy, const StateValueStructure<StateType>& valueStr);
 
-	void Run(const Environment<StateType, ActionType>& env, Policy<StateType, ActionType>& policy, ValueStructure<StateType>& valueStr);
+	void Run(const Environment<StateType, ActionType>& env, Policy<StateType, ActionType>& policy, StateValueStructure<StateType>& valueStr);
 };
 
 template<class StateType, class ActionType>
@@ -32,7 +32,7 @@ bool PolicyIteration<StateType, ActionType>::MapsAreEqual(const map<ActionType, 
 }
 
 template<class StateType, class ActionType>
-void PolicyIteration<StateType, ActionType>::EvaluatePolicy(const Environment<StateType, ActionType>& env, const Policy<StateType, ActionType>& policy, ValueStructure<StateType>& valueStr)  
+void PolicyIteration<StateType, ActionType>::EvaluatePolicy(const Environment<StateType, ActionType>& env, const Policy<StateType, ActionType>& policy, StateValueStructure<StateType>& valueStr)  
 {
 	vector<StateType> allStates = env.GetAllStates();
 
@@ -60,7 +60,7 @@ void PolicyIteration<StateType, ActionType>::EvaluatePolicy(const Environment<St
 }
 
 template<class StateType, class ActionType>
-bool PolicyIteration<StateType, ActionType>::ImporvePolicy(const Environment<StateType, ActionType>& env, Policy<StateType, ActionType>& policy, const ValueStructure<StateType>& valueStr)
+bool PolicyIteration<StateType, ActionType>::ImporvePolicy(const Environment<StateType, ActionType>& env, Policy<StateType, ActionType>& policy, const StateValueStructure<StateType>& valueStr)
 {
 	bool anyChange = false;	
 
@@ -101,7 +101,7 @@ bool PolicyIteration<StateType, ActionType>::ImporvePolicy(const Environment<Sta
 }
 
 template<class StateType, class ActionType>
-void PolicyIteration<StateType, ActionType>::Run(const Environment<StateType, ActionType>& env, Policy<StateType, ActionType>& policy, ValueStructure<StateType>& valueStr)
+void PolicyIteration<StateType, ActionType>::Run(const Environment<StateType, ActionType>& env, Policy<StateType, ActionType>& policy, StateValueStructure<StateType>& valueStr)
 {
 	bool policyChanged = true;
 	int i = 0;

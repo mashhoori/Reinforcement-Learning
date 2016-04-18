@@ -1,14 +1,27 @@
 ﻿  GridWorld.cpp
-c:\users\a.mashhoori\documents\visual studio 2015\projects\gridworld\gridworld\policyiteration.h(91): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  c:\users\a.mashhoori\documents\visual studio 2015\projects\gridworld\gridworld\policyiteration.h(64): note: while compiling class template member function 'bool PolicyIteration<GridCell,Move>::ImporvePolicy(const Environment<GridCell,Move> &,Policy<GridCell,Move> &,const ValueStructure<GridCell> &)'
-  c:\users\a.mashhoori\documents\visual studio 2015\projects\gridworld\gridworld\policyiteration.h(111): note: see reference to function template instantiation 'bool PolicyIteration<GridCell,Move>::ImporvePolicy(const Environment<GridCell,Move> &,Policy<GridCell,Move> &,const ValueStructure<GridCell> &)' being compiled
-  c:\users\a.mashhoori\documents\visual studio 2015\projects\gridworld\gridworld\policyiteration.h(105): note: while compiling class template member function 'void PolicyIteration<GridCell,Move>::Run(const Environment<GridCell,Move> &,Policy<GridCell,Move> &,ValueStructure<GridCell> &)'
-  c:\users\a.mashhoori\documents\visual studio 2015\projects\gridworld\gridworld\gridworld.cpp(45): note: see reference to function template instantiation 'void PolicyIteration<GridCell,Move>::Run(const Environment<GridCell,Move> &,Policy<GridCell,Move> &,ValueStructure<GridCell> &)' being compiled
-  c:\users\a.mashhoori\documents\visual studio 2015\projects\gridworld\gridworld\gridworld.cpp(44): note: see reference to class template instantiation 'PolicyIteration<GridCell,Move>' being compiled
-c:\users\a.mashhoori\documents\visual studio 2015\projects\gridworld\gridworld\valueiteration.h(83): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  c:\users\a.mashhoori\documents\visual studio 2015\projects\gridworld\gridworld\valueiteration.h(56): note: while compiling class template member function 'void ValueIteration<GridCell,Move>::CreatePolicy(const Environment<GridCell,Move> &,Policy<GridCell,Move> &,const ValueStructure<GridCell> &)'
-  c:\users\a.mashhoori\documents\visual studio 2015\projects\gridworld\gridworld\valueiteration.h(94): note: see reference to function template instantiation 'void ValueIteration<GridCell,Move>::CreatePolicy(const Environment<GridCell,Move> &,Policy<GridCell,Move> &,const ValueStructure<GridCell> &)' being compiled
-  c:\users\a.mashhoori\documents\visual studio 2015\projects\gridworld\gridworld\valueiteration.h(92): note: while compiling class template member function 'void ValueIteration<GridCell,Move>::Run(const Environment<GridCell,Move> &,Policy<GridCell,Move> &,ValueStructure<GridCell> &)'
-  c:\users\a.mashhoori\documents\visual studio 2015\projects\gridworld\gridworld\gridworld.cpp(48): note: see reference to function template instantiation 'void ValueIteration<GridCell,Move>::Run(const Environment<GridCell,Move> &,Policy<GridCell,Move> &,ValueStructure<GridCell> &)' being compiled
-  c:\users\a.mashhoori\documents\visual studio 2015\projects\gridworld\gridworld\gridworld.cpp(47): note: see reference to class template instantiation 'ValueIteration<GridCell,Move>' being compiled
+c:\users\a.mashhoori\documents\visual studio 2015\projects\gridworld\gridworld\montecarlo_es.h(142): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  c:\users\a.mashhoori\documents\visual studio 2015\projects\gridworld\gridworld\montecarlo_es.h(121): note: while compiling class template member function 'void MonteCarlo_ES<GridCell,Move>::Run(const Environment<GridCell,Move> &,Policy<GridCell,Move> &,ActionValueStructure<GridCell,Move> &)'
+  c:\users\a.mashhoori\documents\visual studio 2015\projects\gridworld\gridworld\gridworld.cpp(58): note: see reference to function template instantiation 'void MonteCarlo_ES<GridCell,Move>::Run(const Environment<GridCell,Move> &,Policy<GridCell,Move> &,ActionValueStructure<GridCell,Move> &)' being compiled
+  c:\users\a.mashhoori\documents\visual studio 2015\projects\gridworld\gridworld\gridworld.cpp(57): note: see reference to class template instantiation 'MonteCarlo_ES<GridCell,Move>' being compiled
+c:\users\a.mashhoori\documents\visual studio 2015\projects\gridworld\gridworld\montecarlo_es.h(109): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+  c:\users\a.mashhoori\documents\visual studio 2015\projects\gridworld\gridworld\montecarlo_es.h(82): note: while compiling class template member function 'void MonteCarlo_ES<GridCell,Move>::ImporvePolicy(const Environment<GridCell,Move> &,Policy<GridCell,Move> &,const ActionValueStructure<GridCell,Move> &,const std::vector<StateType,std::allocator<_Ty>> &)'
+          with
+          [
+              StateType=GridCell,
+              _Ty=GridCell
+          ]
+  c:\users\a.mashhoori\documents\visual studio 2015\projects\gridworld\gridworld\montecarlo_es.h(157): note: see reference to function template instantiation 'void MonteCarlo_ES<GridCell,Move>::ImporvePolicy(const Environment<GridCell,Move> &,Policy<GridCell,Move> &,const ActionValueStructure<GridCell,Move> &,const std::vector<StateType,std::allocator<_Ty>> &)' being compiled
+          with
+          [
+              StateType=GridCell,
+              _Ty=GridCell
+          ]
+  c:\users\a.mashhoori\documents\visual studio 2015\projects\gridworld\gridworld\montecarlo_es.h(121): note: while compiling class template member function 'void MonteCarlo_ES<GridCell,Move>::Run(const Environment<GridCell,Move> &,Policy<GridCell,Move> &,ActionValueStructure<GridCell,Move> &)'
+  c:\users\a.mashhoori\documents\visual studio 2015\projects\gridworld\gridworld\gridworld.cpp(58): note: see reference to function template instantiation 'void MonteCarlo_ES<GridCell,Move>::Run(const Environment<GridCell,Move> &,Policy<GridCell,Move> &,ActionValueStructure<GridCell,Move> &)' being compiled
+  GridActionValueStructure.cpp
+c:\users\a.mashhoori\documents\visual studio 2015\projects\gridworld\gridworld\gridactionvaluestructure.cpp(46): warning C4018: '<': signed/unsigned mismatch
+c:\users\a.mashhoori\documents\visual studio 2015\projects\gridworld\gridworld\gridactionvaluestructure.cpp(48): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+c:\users\a.mashhoori\documents\visual studio 2015\projects\gridworld\gridworld\global.h(27): warning C4715: 'Global::SelectFromDistribution<GridCell>': not all control paths return a value
+c:\users\a.mashhoori\documents\visual studio 2015\projects\gridworld\gridworld\global.h(27): warning C4715: 'Global::SelectFromDistribution<Move>': not all control paths return a value
   GridWorld.vcxproj -> C:\Users\a.mashhoori\Documents\Visual Studio 2015\Projects\GridWorld\Debug\GridWorld.exe

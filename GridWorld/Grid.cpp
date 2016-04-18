@@ -101,6 +101,14 @@ vector<Move> Grid::GetPossibleActions(const GridCell& state) const
 	return list;
 }
 
+bool Grid::IsStateFinal(const GridCell& state) const
+{
+	if (cellStatusMat[state.GetRowIndex()][state.GetColIndex()] == GridCellStatus::Final)
+		return true;
+
+	return false;
+}
+
 void Grid::SetReward(int i, int j, float reward)
 {	
 	rewardMat[i][j] = reward;

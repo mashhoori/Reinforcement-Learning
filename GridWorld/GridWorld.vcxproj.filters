@@ -42,9 +42,6 @@
     <ClInclude Include="GridPolicy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GridValueStructure.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Action.h">
       <Filter>Header Files\Base Classes</Filter>
     </ClInclude>
@@ -57,14 +54,29 @@
     <ClInclude Include="Environment.h">
       <Filter>Header Files\Base Classes</Filter>
     </ClInclude>
-    <ClInclude Include="ValueStructure.h">
-      <Filter>Header Files\Base Classes</Filter>
-    </ClInclude>
     <ClInclude Include="PolicyIteration.h">
       <Filter>Header Files\Algorithms</Filter>
     </ClInclude>
     <ClInclude Include="ValueIteration.h">
       <Filter>Header Files\Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionValueStructure.h">
+      <Filter>Header Files\Base Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="StateValueStructure.h">
+      <Filter>Header Files\Base Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="MonteCarlo_ES.h">
+      <Filter>Header Files\Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="Global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GridActionValueStructure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GridStateValueStructure.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -86,7 +98,13 @@
     <ClCompile Include="GridPolicy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GridValueStructure.cpp">
+    <ClCompile Include="Global.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GridActionValueStructure.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GridStateValueStructure.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

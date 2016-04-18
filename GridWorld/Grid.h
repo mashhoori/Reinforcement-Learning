@@ -28,6 +28,7 @@ public:
 	map<GridCell, float> GetNextStateDistribution(const GridCell& state, const Move& a) const;
 	vector<GridCell> GetAllStates() const;
 	vector<Move> GetPossibleActions(const GridCell& state) const;	
+	bool IsStateFinal(const GridCell& state) const;
 
 	void SetReward(int i, int j, float reward);
 	void SetCellStatus(int i, int j, GridCellStatus status);
